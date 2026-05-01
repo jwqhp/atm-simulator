@@ -4,9 +4,15 @@ void Get_cash(int &b) {
     int get_c;
     std::cout << "Сколько вы хотите снять? ";
     std::cin >> get_c;
+    int get_temp = b - get_c;
 
-    b -= get_c;
+    if(get_temp >= 0) {
+        b -= get_c;
     std::cout << "Снято с баланса " << get_c << std::endl;
+    }
+    else {
+        std::cout << "Недостаточно средств " << std::endl;
+    }
 }
 
 void deposit(int &b) {
