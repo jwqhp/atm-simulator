@@ -28,8 +28,8 @@ int main() {
     int balance = 0;
     int menu = 0;
     
-    while (menu != 5) {
-        std::cout << "\n1.Баланс\n2.Снять\n3.Внести\n";
+    while (menu != 4) {
+        std::cout << "\n1.Баланс\n2.Снять\n3.Внести\n4.Выход\n";
         std::cin >> menu;
 
         switch (menu) {
@@ -42,6 +42,10 @@ int main() {
         case 3:
             deposit(balance);
             break;
+        case 4:
+            break;
+        default:
+                std::cout << "Такой функции не существует" << std::endl;
         }
     }
     return 0;
